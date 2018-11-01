@@ -2,6 +2,7 @@ from flask import Flask
 
 from {{cookiecutter.app_name}} import auth, api
 from {{cookiecutter.app_name}}.extensions import db, jwt, migrate
+from {{cookiecutter.app_name}}.config import Configuration
 
 
 def create_app(config=None, testing=False, cli=False):
@@ -15,19 +16,10 @@ def create_app(config=None, testing=False, cli=False):
 
     return app
 
-
 def configure_app(app, testing=False):
     """set configuration for application
     """
-    # default configuration
-    app.config.from_object('{{cookiecutter.app_name}}.config')
-
-    if testing is True:
-        # override with testing config
-        app.config.from_object('{{cookiecutter.app_name}}.configtest')
-    else:
-        # override with env variable, fail silently if not set
-        app.config.from_envvar("{{cookiecutter.app_name|upper}}_CONFIG", silent=True)
+    app.config.from_object(Configuration)
 
 
 def configure_extensions(app, cli):

@@ -14,6 +14,7 @@ setup(
         'flask-migrate',
         'flask-jwt-extended',
         'flask-marshmallow',
+        'Flask-Env',
         'marshmallow-sqlalchemy',
         'python-dotenv',
         'passlib'

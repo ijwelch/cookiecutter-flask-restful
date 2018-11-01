@@ -1,12 +1,15 @@
 """Default configuration
 
-Use env var to override
+Use env variables to override
 """
-DEBUG = True
-SECRET_KEY = "changeme"
+from flask_env import MetaFlaskEnv
 
-SQLALCHEMY_DATABASE_URI = "sqlite:////tmp/{{cookiecutter.app_name}}.db"
-SQLALCHEMY_TRACK_MODIFICATIONS = False
+class Configuration(metaclass=MetaFlaskEnv):
+    DEBUG = True
+    SECRET_KEY = "changeme"
 
-JWT_BLACKLIST_ENABLED = True
-JWT_BLACKLIST_TOKEN_CHECKS = ['access', 'refresh']
+    SQLALCHEMY_DATABASE_URI = "sqlite:////tmp/{{cookiecutter.app_name}}.db"
+    SQLALCHEMY_TRACK_MODIFICATIONS = False
+
+    JWT_BLACKLIST_ENABLED = True
+    JWT_BLACKLIST_TOKEN_CHECKS = ['access', 'refresh']
