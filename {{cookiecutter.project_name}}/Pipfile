@@ -1,0 +1,23 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+flask-marshmallow = "*"
+marshmallow = "*"
+marshmallow-sqlalchemy = "*"
+passlib = "*"
+Flask = "*"
+Flask-JWT-Extended = "*"
+Flask-Migrate = "*"
+Flask-RESTful = "*"
+Flask-SQLAlchemy = "*"
+uWSGI = "*"
+slp-auth = {editable = true, path = "."}
+flask-env = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.7"
