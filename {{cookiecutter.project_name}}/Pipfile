@@ -14,8 +14,13 @@ Flask-Migrate = "*"
 Flask-RESTful = "*"
 Flask-SQLAlchemy = "*"
 uWSGI = "*"
-slp-auth = {editable = true, path = "."}
 flask-env = "*"
+pytest = "*"
+pytest-factoryboy = "*"
+pytest-runner = "*"
+pytest-flask = "*"
+factory-boy = "*"
+{{app_name}} = {editable = true, path = "."}
 
 [dev-packages]
 
