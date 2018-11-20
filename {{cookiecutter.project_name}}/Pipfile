@@ -21,6 +21,7 @@ pytest-runner = "*"
 pytest-flask = "*"
 factory-boy = "*"
 {{cookiecutter.app_name}} = {editable = true, path = "."}
+pymysql = "*"
 
 [dev-packages]
 

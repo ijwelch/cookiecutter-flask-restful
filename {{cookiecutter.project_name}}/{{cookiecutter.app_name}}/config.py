@@ -8,6 +8,7 @@ class Configuration(metaclass=MetaFlaskEnv):
     DEBUG = True
     SECRET_KEY = "changeme"
 
+    # SQLALCHEMY_DATABASE_URI = "mysql+pymysql://<USERNAME>:<PASSWORD>@<HOST>:<PORT>/<DB_NAME>"
     SQLALCHEMY_DATABASE_URI = "sqlite:////tmp/{{cookiecutter.app_name}}.db"
     SQLALCHEMY_TRACK_MODIFICATIONS = False
 
