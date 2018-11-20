@@ -20,7 +20,7 @@ pytest-factoryboy = "*"
 pytest-runner = "*"
 pytest-flask = "*"
 factory-boy = "*"
-{{app_name}} = {editable = true, path = "."}
+{{cookiecutter.app_name}} = {editable = true, path = "."}
 
 [dev-packages]
 
