@@ -1,4 +1,4 @@
 {
   "project_name": "api_name",
-  "app_name": "api"
+  "app_name": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}"
 }
